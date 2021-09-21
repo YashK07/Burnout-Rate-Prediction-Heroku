@@ -1,1 +1,1 @@
-# Burnout-Rate-Prediction-Heroku-API
+# Burnout-Rate-Prediction-Heroku-Project
