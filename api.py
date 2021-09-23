@@ -46,23 +46,23 @@ def predict():
     stat = 0
     #top 25 percentile
     if(prediction<=0.3):
-        feedback1 = "You have a low burnout rate of {}".format(prediction)
+        feedback1 = "Fantastic! You have a low burnout rate of {} .".format(prediction)
         return render_template("index_1.html",color = "color:#33CC00;",feedback = feedback1)
     #top 25 percentile to 75 percentile
     elif((prediction>0.3) & (prediction<=0.59)):
-        feedback2 = "You have a moderate burnout rate of {}".format(prediction)
+        feedback2 = "Not bad...You have a moderate burnout rate of {} .".format(prediction)
         return render_template("index_1.html",color = "color:#339900;",feedback = feedback2)
     #top 75 percentile to 90 percentile
     elif((prediction>0.59) & (prediction<=0.80)):
-        feedback3 = "You have a high burnout rate of {}!".format(prediction)
+        feedback3 = "Oops!! You have a high burnout rate of {} .".format(prediction)
         return render_template("index_1.html",color = "color:#FF0000;",feedback = feedback3)
     #top 90 percentile to 99 percentile
     elif((prediction>0.8) & (prediction<=0.9)):
-        feedback4 = "You have a very high burnout rate of {}!!".format(prediction)
+        feedback4 = "Ouch!!! You have a very high burnout rate of {} .".format(prediction)
         return render_template("index_1.html",color ="color:#CC0000;",feedback = feedback4)
     #top 99 percentile
     else:
-        feedback5 = "You have an extremly high burnout rate of {}!!!".format(prediction)
+        feedback5 = "Sorry! You have an extremly high burnout rate of {} .".format(prediction)
         return render_template("index_1.html",color ="color:#990000;",feedback = feedback5)
     """
     else:
