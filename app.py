@@ -9,7 +9,7 @@ from xgboost import XGBRegressor
 #from xgboost import XGBRegressor
 
 app = Flask(__name__) #Initialize the flask app
-model = pickle.load(open("model\\bunrout_model_xgb.pkl", 'rb'))
+model = pickle.load(open("bunrout_model_xgb.pkl", 'rb'))
 
 
 @app.route('/')
